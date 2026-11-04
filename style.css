@@ -584,6 +584,12 @@ button {
     text-align: center;
   }
 
+  /* Toppbilden med samma marginal som korten (ingen skugga).
+     Ta bort denna regel för kant till kant. */
+  .hero__image {
+    margin: var(--layout-pad) var(--layout-pad) 0;
+  }
+
   .work-grid {
     gap: 0.6rem;
   }
