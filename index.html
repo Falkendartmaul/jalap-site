@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Albert Jalap är fotograf. Bostad, natur, porträtt och event." />
+  <title>Albert Jalap – Fotograf</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="top-bar">
+    <nav class="top-nav" aria-label="Huvudnavigation">
+      <div class="nav-group">
+        <a href="#start" class="nav-item is-active" data-nav-link><span class="nav-dot" aria-hidden="true"></span>Hem</a>
+        <a href="#uppdrag" class="nav-item" data-nav-link><span class="nav-dot" aria-hidden="true"></span>Uppdrag</a>
+      </div>
+      <a href="#start" class="nav-logo">ALBERT JALAP</a>
+      <div class="nav-group">
+        <a href="#om" class="nav-item" data-nav-link><span class="nav-dot" aria-hidden="true"></span>Om</a>
+        <a href="#kontakt" class="nav-item" data-nav-link><span class="nav-dot" aria-hidden="true"></span>Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO: stor titel vänster, bild höger (som smajl.se) -->
+    <section class="hero" id="start">
+      <div class="hero__text">
+        <h1 class="hero__title">
+          <span>Albert</span>
+          <span>Jalap</span>
+          <span class="hero__title--outline">Foto</span>
+        </h1>
+        <p class="hero__lead">Bostad, natur &amp; porträtt – bilder med känsla för ljus, rum och människor.</p>
+        <a href="#uppdrag" class="hero__cta">Se uppdrag »</a>
+      </div>
+      <div class="hero__image">
+        <img src="assets/gata-soldat.jpg" alt="Man i uniform går längs en stenmur i lågt solljus" />
+      </div>
+    </section>
+
+    <!-- UPPDRAG -->
+    <section class="work" id="uppdrag">
+      <header class="section-header">
+        <h2>Uppdrag</h2>
+      </header>
+
+      <div class="filters" role="group" aria-label="Filtrera uppdrag">
+        <button class="filter is-active" type="button" data-filter="alla">Alla</button>
+        <button class="filter" type="button" data-filter="bostad">Bostad</button>
+        <button class="filter" type="button" data-filter="natur">Natur</button>
+        <button class="filter" type="button" data-filter="portratt">Porträtt</button>
+        <button class="filter" type="button" data-filter="event">Event</button>
+      </div>
+
+      <!--
+        Varje uppdrag: data-category styr filtret, data-images är bilderna som visas i lightboxen
+        (kommaseparerade). Första bilden används som omslag.
+      -->
+      <div class="work-grid">
+        <article class="work-card" data-category="bostad"
+          data-images="assets/bostad-kok.jpg,assets/bostad-villa.jpg">
+          <button class="work-card__media" type="button" aria-label="Visa bilder: Bostad">
+            <img src="assets/bostad-kok.jpg" alt="Kök med blågrå luckor och ljus vägg" loading="lazy" />
+          </button>
+          <div class="work-card__body">
+            <h3 class="work-card__title">Bostad</h3>
+            <button class="work-card__more" type="button">Visa bilder »</button>
+          </div>
+        </article>
+
+        <article class="work-card" data-category="event"
+          data-images="assets/event-konsert-publik.jpg,assets/event-konsert-sangare.jpg">
+          <button class="work-card__media" type="button" aria-label="Visa bilder: Event">
+            <img src="assets/event-konsert-publik.jpg" alt="Artist på scen framför publik i kvällsljus" loading="lazy" />
+          </button>
+          <div class="work-card__body">
+            <h3 class="work-card__title">Event</h3>
+            <button class="work-card__more" type="button">Visa bilder »</button>
+          </div>
+        </article>
+
+        <article class="work-card" data-category="portratt"
+          data-images="assets/portratt-hatt.jpg,assets/portratt-skugga.jpg">
+          <button class="work-card__media" type="button" aria-label="Visa bilder: Porträtt">
+            <img src="assets/portratt-hatt.jpg" alt="Äldre man i hatt på ett torg" loading="lazy" />
+          </button>
+          <div class="work-card__body">
+            <h3 class="work-card__title">Porträtt</h3>
+            <button class="work-card__more" type="button">Visa bilder »</button>
+          </div>
+        </article>
+
+        <article class="work-card" data-category="portratt"
+          data-images="assets/gata-barnvagn.jpg,assets/gata-soldat.jpg">
+          <button class="work-card__media" type="button" aria-label="Visa bilder: Gatufoto">
+            <img src="assets/gata-barnvagn.jpg" alt="Kvinna med barnvagn och ett barn framför en graffitimålad port" loading="lazy" />
+          </button>
+          <div class="work-card__body">
+            <h3 class="work-card__title">Gatufoto</h3>
+            <button class="work-card__more" type="button">Visa bilder »</button>
+          </div>
+        </article>
+
+        <article class="work-card work-card--wide" data-category="natur"
+          data-images="assets/natur-solnedgang.jpg">
+          <button class="work-card__media" type="button" aria-label="Visa bilder: Natur">
+            <img src="assets/natur-solnedgang.jpg" alt="Solnedgång över havet med klippor i förgrunden" loading="lazy" />
+          </button>
+          <div class="work-card__body">
+            <h3 class="work-card__title">Natur</h3>
+            <button class="work-card__more" type="button">Visa bilder »</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Avdelare -->
+    <div class="divider" aria-hidden="true"><span class="divider__dot"></span></div>
+
+    <!-- OM -->
+    <section class="about" id="om">
+      <div class="about__image">
+        <img src="assets/om-albert.jpg" alt="Porträtt av Albert Jalap" loading="lazy" />
+      </div>
+      <div class="about__text">
+        <h2>Om Albert</h2>
+        <p>
+          Albert Jalap är fotograf med fokus på bostad, natur och porträtt.
+          Här skriver ni en kort presentation – bakgrund, var Albert är baserad
+          och vilken typ av uppdrag hen helst tar sig an.
+        </p>
+        <p>
+          Ett andra stycke om arbetssätt, till exempel hur ett uppdrag går till
+          från första samtal till levererade bilder.
+        </p>
+        <ul class="about__chips">
+          <li>Bostad</li>
+          <li>Natur</li>
+          <li>Porträtt</li>
+          <li>Event</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="contact-section" id="kontakt">
+      <header class="section-header">
+        <h2>Kontakt</h2>
+      </header>
+      <div class="contact-cards">
+        <article class="contact-card">
+          <p class="contact-card__label">E-post</p>
+          <a class="contact-card__value" href="mailto:hej@albertjalap.se">hej@albertjalap.se</a>
+        </article>
+        <article class="contact-card">
+          <p class="contact-card__label">Telefon</p>
+          <a class="contact-card__value" href="tel:+46700000000">+46 70-000 00 00</a>
+        </article>
+        <article class="contact-card">
+          <p class="contact-card__label">Instagram</p>
+          <a class="contact-card__value" href="https://www.instagram.com/fotografalbert/" target="_blank" rel="noopener noreferrer">@fotografalbert</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Copyright &copy; <span id="footerYear"></span> Albert Jalap.</span>
+      <span>Alla bilder är skyddade av upphovsrätt.</span>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Bildvisning">
+    <button class="lightbox__close" type="button" data-lightbox-close aria-label="Stäng">×</button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Föregående bild">‹</button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__image" data-lightbox-image src="" alt="" />
+      <figcaption class="lightbox__caption" data-lightbox-caption></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Nästa bild">›</button>
+  </div>
+
+  <script>
+    // Aktiv länk i menyn när man scrollar
+    (function () {
+      const links = Array.from(document.querySelectorAll("[data-nav-link]"));
+      const sections = links.map((l) => document.querySelector(l.getAttribute("href"))).filter(Boolean);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          links.forEach((l) => l.classList.toggle("is-active", l.getAttribute("href") === "#" + entry.target.id));
+        });
+      }, { rootMargin: "-45% 0px -50% 0px" });
+      sections.forEach((s) => observer.observe(s));
+    })();
+
+    // Filter för uppdrag
+    (function () {
+      const buttons = document.querySelectorAll("[data-filter]");
+      const cards = document.querySelectorAll(".work-card");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const f = btn.dataset.filter;
+          buttons.forEach((b) => b.classList.toggle("is-active", b === btn));
+          cards.forEach((c) => {
+            c.hidden = !(f === "alla" || c.dataset.category === f);
+          });
+        });
+      });
+    })();
+
+    // Lightbox: varje uppdrag öppnar sina egna bilder
+    (function () {
+      const lightbox = document.querySelector("[data-lightbox]");
+      const imageEl = lightbox.querySelector("[data-lightbox-image]");
+      const captionEl = lightbox.querySelector("[data-lightbox-caption]");
+      const closeBtn = lightbox.querySelector("[data-lightbox-close]");
+      let images = [];
+      let title = "";
+      let index = 0;
+      let lastFocus = null;
+
+      function show(i) {
+        index = (i + images.length) % images.length;
+        imageEl.src = images[index];
+        imageEl.alt = title + " – bild " + (index + 1);
+        captionEl.textContent = title + "  ·  " + (index + 1) + " / " + images.length;
+      }
+
+      function open(card) {
+        images = card.dataset.images.split(",").map((s) => s.trim());
+        title = card.querySelector(".work-card__title").textContent;
+        lastFocus = document.activeElement;
+        show(0);
+        lightbox.hidden = false;
+        document.body.classList.add("is-lightbox-open");
+        closeBtn.focus();
+      }
+
+      function close() {
+        lightbox.hidden = true;
+        document.body.classList.remove("is-lightbox-open");
+        if (lastFocus) lastFocus.focus();
+      }
+
+      document.querySelectorAll(".work-card").forEach((card) => {
+        card.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => open(card)));
+      });
+      lightbox.querySelector("[data-lightbox-prev]").addEventListener("click", () => show(index - 1));
+      lightbox.querySelector("[data-lightbox-next]").addEventListener("click", () => show(index + 1));
+      closeBtn.addEventListener("click", close);
+      lightbox.addEventListener("click", (e) => { if (e.target === lightbox) close(); });
+      document.addEventListener("keydown", (e) => {
+        if (lightbox.hidden) return;
+        if (e.key === "Escape") close();
+        if (e.key === "ArrowRight") show(index + 1);
+        if (e.key === "ArrowLeft") show(index - 1);
+      });
+    })();
+
+    document.getElementById("footerYear").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
